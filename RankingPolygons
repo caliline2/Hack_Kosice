@@ -1,0 +1,231 @@
+import os
+import json
+import time
+import requests
+import urllib.parse
+from IPython.display import Image, display
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+
+# Azure Maps API
+subscriptionKey = "mdvhwX6Era11JlFA5Mtx9Lar7xnzUxQc_6fuvtQ8p_w"
+# User input polygon
+#polygon = input("Enter the polygon coordinates as a list of coordinates (e.g., [[lat1, lon1], [lat2, lon2], ...]): ")
+#boundsData = {
+#               "geometry": {
+#                 "type": "Polygon",
+#                 "coordinates": polygon
+#                }
+#             }
+
+#boundsDataF = json.dumps(boundsData, indent=4)
+#print(boundsDataF)
+import json
+
+#polygon = [[21.2650738, 48.74319276], [21.2694556, 48.74673084], [21.2694556, 48.74673084], [21.2650738, 48.74673084]]
+
+
+#input("Enter the polygon coordinates as a list of coordinates (e.g., [[lat1, lon1], [lat2, lon2], ...]): ")
+#boundsData = {
+#    "geometry": {
+#        "type": "Polygon",
+#        "coordinates": polygon
+#    }
+#}
+
+#boundsDataF = json.dumps(boundsData)
+#print(boundsDataF)
+
+boundsData = {
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [21.2650738, 48.74319276],
+                [21.2694556, 48.74673084],
+                [21.2694556, 48.74673084],
+                [21.2650738, 48.74673084],
+                [21.2650738, 48.74319276]
+            ]
+        ]
+    }
+}
+
+#boundsData = {"geometry": {
+#        "type": "Polygon",
+#        "coordinates": [[21.2650738, 48.74319276],	[21.2694556,48.74673084],[21.2694556,48.74673084], [21.2650738, 48.74673084]]}}
+#
+
+
+poiNames = ["ACCESS_GATEWAY",
+"ADMINISTRATIVE_DIVISION",
+"ADVENTURE_SPORTS_VENUE",
+"AGRICULTURE",
+"AIRPORT",
+"AMUSEMENT_PARK",
+"AUTOMOTIVE_DEALER",
+"BANK",
+"BEACH",
+"BUILDING_POINT",
+"BUSINESS_PARK",
+"CAFE_PUB",
+"CAMPING_GROUND",
+"CAR_WASH",
+"CASH_DISPENSER",
+"CASINO",
+"CINEMA",
+"CITY_CENTER",
+"CLUB_ASSOCIATION",
+"COLLEGE_UNIVERSITY",
+"COMMERCIAL_BUILDING",
+"COMMUNITY_CENTER",
+"COMPANY",
+"COURTHOUSE",
+"CULTURAL_CENTER",
+"DENTIST",
+"DEPARTMENT_STORE",
+"DOCTOR",
+"ELECTRIC_VEHICLE_STATION",
+"EMBASSY",
+"EMERGENCY_MEDICAL_SERVICE",
+"ENTERTAINMENT",
+"EXCHANGE",
+"EXHIBITION_CONVENTION_CENTER",
+"FERRY_TERMINAL",
+"FIRE_STATION_BRIGADE",
+"FRONTIER_CROSSING",
+"FUEL_FACILITIES",
+"GEOGRAPHIC_FEATURE",
+"GOLF_COURSE",
+"GOVERNMENT_OFFICE",
+"HEALTH_CARE_SERVICE",
+"HELIPAD_HELICOPTER_LANDING",
+"HOLIDAY_RENTAL",
+"HOSPITAL_POLYCLINIC",
+"HOTEL_MOTEL",
+"ICE_SKATING_RINK",
+"IMPORTANT_TOURIST_ATTRACTION",
+"INDUSTRIAL_BUILDING",
+"LEISURE_CENTER",
+"LIBRARY",
+"MANUFACTURING_FACILITY",
+"MARINA",
+"MARKET",
+"MEDIA_FACILITY",
+"MILITARY_INSTALLATION",
+"MOTORING_ORGANIZATION_OFFICE",
+"MOUNTAIN_PASS",
+"MUSEUM",
+"NATIVE_RESERVATION",
+"NIGHTLIFE",
+"NON_GOVERNMENTAL_ORGANIZATION",
+"OPEN_PARKING_AREA",
+"OTHER",
+"PARKING_GARAGE",
+"PARK_RECREATION_AREA",
+"PETROL_STATION",
+"PHARMACY",
+"PLACE_OF_WORSHIP",
+"POLICE_STATION",
+"PORT_WAREHOUSE_FACILITY",
+"POST_OFFICE",
+"PRIMARY_RESOURCE_UTILITY",
+"PRISON_CORRECTIONAL_FACILITY",
+"PUBLIC_AMENITY",
+"PUBLIC_TRANSPORT_STOP",
+"RAILWAY_STATION",
+"RENT_A_CAR_FACILITY",
+"RENT_A_CAR_PARKING",
+"REPAIR_FACILITY",
+"RESEARCH_FACILITY",
+"RESIDENTIAL_ACCOMMODATION",
+"RESTAURANT",
+"RESTAURANT_AREA",
+"REST_AREA",
+"SCENIC_PANORAMIC_VIEW",
+"SCHOOL",
+"SHOP",
+"SHOPPING_CENTER",
+"SPORTS_CENTER",
+"STADIUM",
+"SWIMMING_POOL",
+"TENNIS_COURT",
+"THEATER",
+"TOURIST_INFORMATION_OFFICE",
+"TRAFFIC_LIGHT",
+"TRAFFIC_SERVICE_CENTER",
+"TRAFFIC_SIGN",
+"TRAIL_SYSTEM",
+"TRANSPORT_AUTHORITY",
+"VEHICLE_REGISTRATION",
+"TRUCK_STOP",
+"VETERINARIAN",
+"WATER_SPORT",
+"WEIGH_STATION",
+"WELFARE_ORGANIZATION",
+"WINERY",
+"ZOOS_ARBORETA_BOTANICAL_GARDEN",]
+
+
+
+# Calculating count = counting
+# Observations = to display on the map
+
+n = 0
+counting = pd.DataFrame(columns=['Category', 'Count'])
+observations = pd.DataFrame(columns=['Category','Name','Latitude','Longitude'])
+
+for n in range(106):
+    if n >= len(poiNames):
+        break
+    poiName = poiNames[n]
+    searchPolyResponse = requests.post(url = "https://atlas.microsoft.com/search/geometry/json?subscription-key={}&api-version=1.0&query={}&idxSet=POI&limit=50".format(subscriptionKey, poiName), json = boundsData).json()
+    print(searchPolyResponse)
+    numRes = searchPolyResponse["summary"]["numResults"]
+    print("Total Number of "+ poiName +" nearby: ", numRes)
+    counting= counting.append({'Category': poiName, 'Count': numRes}, ignore_index=True)    
+    print("Here is a list of the Search Results: ")
+    for loc in range(len(searchPolyResponse["results"])):
+                print(loc+1,". ",searchPolyResponse["results"][loc]["poi"]["name"])
+    for loc in range(len(searchPolyResponse["results"])):
+        print(loc+1,". ",searchPolyResponse["results"][loc]["poi"]["name"])
+        latitude = searchPolyResponse["results"][loc]["position"]["lat"]
+        longitude = searchPolyResponse["results"][loc]["position"]["lon"]
+        print("Latitude: ", latitude)
+        print("Longitude: ", longitude)
+        observations = counting.append({'Category': poiName, 'Name': (loc+1,". ",searchPolyResponse["results"][loc]["poi"]["name"]),'Latitude':latitude,'Longitude':longitude}, ignore_index=True)
+    
+    
+        
+        
+print(counting)
+    #observations = observations.dropna(subset=['Name'], inplace=True)
+    #print(observations)
+    
+# Merging matrix with counting per polygon
+ranking = pd.merge(counting, matrix, on='Category')
+    
+ranking['Industrial_Rank'] = ranking['Scoring_industrial'] * ranking['Count']
+ranking['F&B'] = ranking['Scoring_F&B'] * ranking['Count']
+ranking['Scoring_amenities'] = ranking['Scoring_amenities'] * ranking['Count']
+
+# Normalizing to 0-100
+Industrial_Ranking = ranking['Industrial_Rank'].sum()
+Industrial_Ranking = min(Industrial_Ranking/500, 1) * 100   # normalize score to 0-100 range
+Industrial_Ranking = min(Industrial_Ranking, 100)   # cap the score at 100
+
+FoodandBeverage_Ranking = ranking['F&B'].sum()
+FoodandBeverage_Ranking = min(FoodandBeverage_Ranking/500, 1) * 100   # normalize score to 0-100 range
+FoodandBeverage_Ranking = min(FoodandBeverage_Ranking, 100)   # cap the score at 100
+
+Public_Amenities_Ranking = ranking['Scoring_amenities'].sum()
+Public_Amenities_Ranking = min(Public_Amenities_Ranking/500, 1) * 100   # normalize score to 0-100 range
+Public_Amenities_Ranking = min(Public_Amenities_Ranking, 100)   # cap the score at 100
+
+print("Industrial Ranking is ", Industrial_Ranking)
+print("F&B Ranking is ", FoodandBeverage_Ranking)
+print("Public Amenities Ranking is ", Public_Amenities_Ranking)
