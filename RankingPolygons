@@ -40,6 +40,11 @@ import json
 #boundsDataF = json.dumps(boundsData)
 #print(boundsDataF)
 
+################################################################
+######## TU IDE TVOJ POLYGON ###################################
+################################################################
+
+
 boundsData = {
     "geometry": {
         "type": "Polygon",
