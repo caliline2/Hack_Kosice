@@ -1,4 +1,5 @@
-
+from database import db_session
+from models import *
 
 maxes = [48.753807, 21.326419]
 mins = [48.665355, 21.216874]
@@ -34,20 +35,23 @@ polygons = []
 for i in range(number_of_rows):
     row = []
     for j in range(number_of_rows):
-        latitutde_1 = mins[0] + width_shift*j
-        longtitude_1 = mins[1] + height_shift*i
+        polgo = Polygon()
+        polgo.latitude_1 = mins[0] + width_shift*j
+        polgo.longtitude_1 = mins[1] + height_shift*i
 
-        latitutde_2 = mins[0] + width_shift * j
-        longtitude_2 = mins[1] + height_shift * (i + 1)
+        polgo.latitude_2 = mins[0] + width_shift * j
+        polgo.longtitude_2 = mins[1] + height_shift * (i + 1)
 
-        latitutde_3 = mins[0] + width_shift * (j + 1)
-        longtitude_3 = mins[1] + height_shift * (i + 1)
+        polgo.latitude_3 = mins[0] + width_shift * (j + 1)
+        polgo.longtitude_3 = mins[1] + height_shift * (i + 1)
 
-        latitutde_4 = mins[0] + width_shift * (j + 1)
-        longtitude_4 = mins[1] + height_shift * i
+        polgo.latitude_4 = mins[0] + width_shift * (j + 1)
+        polgo.longtitude_4 = mins[1] + height_shift * i
 
-        row.append([latitutde_1, longtitude_1, latitutde_2, longtitude_2, latitutde_3, longtitude_3, latitutde_4, longtitude_4,])
+        db_session.add(polgo)
+        #row.append([latitutde_1, longtitude_1, latitutde_2, longtitude_2, latitutde_3, longtitude_3, latitutde_4, longtitude_4,])
 
-    polygons.append(row)
+    #polygons.append(row)
 
-print(polygons[10][15])
+db_session.commit()
+print()
