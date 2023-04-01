@@ -1,0 +1,108 @@
+﻿Scoring_industrial,Scoring_F&B,Scoring_amenities,Category,Categories matching code
+1,0,0,ACCESS_GATEWAY,"airline access, security gate, station access, access gateway"
+0,0,1,ADMINISTRATIVE_DIVISION,"province, fourth-order administrative division, first-order administrative division, historical third-order administrative division, seat of a fourth-order administrative division, seat of a second-order administrative division, dependent political entity, populated place, seat of a third-order administrative division, populated places, second-order administrative division, seat of a first-order administrative division, administrative division, populated locality, historical region, historical site, historical populated place, Israeli settlement, historical fourth-order administrative division, fifth-order administrative division, historical first-order administrative division, third-order administrative division, historical political entity, historical administrative division, seat of government of a political entity, historical second-order administrative division, capital/major city of a political entity"
+0,1,1,ADVENTURE_SPORTS_VENUE,adventure sports venue
+0,0,0,AGRICULTURE,"horticulture, primary producer, agriculture, farm, farm village, farmstead, homestead, grazing area, common, aquaculture facility, farms, fishing area, dairy, field(s)"
+1,0,0,AIRPORT,"private authority, military authority, heliport, closed, medium airport, large airport, small airport, airfield, seaplane base, public authority, balloon port, airport"
+0,1,0,AMUSEMENT_PARK,"amusement arcade, amusement place, amusement park"
+1,0,0,AUTOMOTIVE_DEALER,"atv/snowmobile, boat, bus, motorcycle, truck, van, recreational vehicles, car, automotive dealer"
+0,0,1,BANK,"bank, banks, bank(s)"
+0,1,0,BEACH,"beach, beaches"
+0,0,0,BUILDING_POINT,building (point)
+1,0,0,BUSINESS_PARK,"business park, industrial area"
+0,1,0,CAFE_PUB,"internet café, tea house, cafe, internet cafe, café, coffee shop, microbrewery/beer garden, pub, café/pub, cafe/pub"
+0,1,0,CAMPING_GROUND,"recreational, caravan site, camping ground"
+1,0,0,CAR_WASH,car wash
+0,0,1,CASH_DISPENSER,"automatic teller machine, cash dispenser"
+0,1,0,CASINO,casino
+0,1,0,CINEMA,"drive-in cinema, cinema"
+0,1,0,CITY_CENTER,"neighborhood, administrative area, city center, center"
+0,1,0,CLUB_ASSOCIATION,"beach club, hockey club, club association"
+0,1,0,COLLEGE_UNIVERSITY,"junior college/community college, college/university, college, university prep school, university"
+0,1,0,COMMERCIAL_BUILDING,"office building, park headquarters, commercial building"
+0,1,0,COMMUNITY_CENTER,community center
+0,1,0,COMPANY,"electronics, manufacturing, computer data services, public health technologies, diversified financials, animal shelter, airline, equipment rental, service, mail/package/freight delivery, bus lines, home appliance repair, cleaning services, oem, tax services, oil natural gas, legal services, construction, telecommunications, transport, automobile manufacturing, chemicals, funeral service mortuaries, bridge tunnel operations, automobile, mechanical engineering, services, investment advisors, advertising/marketing, moving storage, savings institution, insurance, computer software, pharmaceuticals, catering, wedding services, agricultural technology, real estate, taxi, limousine shuttle service, bus charter rentals, mining, publishing technologies, cable telephone, import/export distribution, company, asylum, coal mine(s), estate(s), brewery, gold mine(s)"
+0,0,1,COURTHOUSE,courthouse
+0,1,0,CULTURAL_CENTER,cultural center
+0,0,1,DENTIST,dentist
+0,1,0,DEPARTMENT_STORE,department store
+0,0,1,DOCTOR,"general practitioner, specialist, doctor"
+1,0,0,ELECTRIC_VEHICLE_STATION,electric vehicle station
+0,0,1,EMBASSY,embassy
+0,0,1,EMERGENCY_MEDICAL_SERVICE,emergency medical service
+0,1,0,ENTERTAINMENT,entertainment
+0,0,1,EXCHANGE,"gold exchange, currency exchange, stock exchange, exchange"
+0,1,0,EXHIBITION_CONVENTION_CENTER,exhibition convention center
+1,0,0,FERRY_TERMINAL,"ferry, ferry terminal"
+0,0,1,FIRE_STATION_BRIGADE,fire station/brigade
+0,0,0,FRONTIER_CROSSING,frontier crossing
+1,0,0,FUEL_FACILITIES,fuel facilities
+0,0,0,GEOGRAPHIC_FEATURE,"bay, cove, pan, locale, ridge, mineral/hot springs, well, reservoir, marsh/swamp/vlei, quarry, river crossing, valley, mountain peak, reef, dune, lagoon, plain/flat, rapids, cape, plateau, oasis, harbor, cave, rocks, geographic feature, promontory(-ies), islands, headland, pier, crater lake, cliff(s), hill, desert, portage, glacier(s), gully, geyser, coral reef(s), gap, gulf, jetty, ghat, hole, crater lakes, gas field, islet, crater(s), cove(s), grassland, gravel area, fracture zone, heath, gorge(s), island, headwaters, hanging valley, hills, hot spring(s), furrow, anabranch"
+0,1,0,GOLF_COURSE,golf course
+0,0,1,GOVERNMENT_OFFICE,"order 5 area, order 8 area, order 9 area, order 2 area, order 7 area, order 3 area, supra national, order 4 area, order 6 area, government office, diplomatic facility, united states government establishment, local government office, customs house, customs post"
+0,0,1,HEALTH_CARE_SERVICE,"blood bank, personal service, personal care facility, ambulance unit, health care service, leprosarium, sanatorium, hospital, medical center, clinic"
+1,0,0,HELIPAD_HELICOPTER_LANDING,helipad/helicopter landing
+0,1,0,HOLIDAY_RENTAL,"bungalow, cottage, chalet, villa, apartment, holiday rental"
+0,0,1,HOSPITAL_POLYCLINIC,"special, hospital of Chinese medicine, hospital for women children, general, hospital/polyclinic"
+0,1,0,HOTEL_MOTEL,"cabins lodges, bed breakfast guest houses, hotel, rest camps, motel, resort, hostel, hotel/motel, resthouse, hammock(s), guest house"
+0,1,0,ICE_SKATING_RINK,ice skating rink
+0,1,0,IMPORTANT_TOURIST_ATTRACTION,"building, observatory, arch, tunnel, statue, tower, bridge, planetarium, mausoleum/grave, monument, water hole, natural attraction, important tourist attraction, promenade, pyramids, pagoda, castle, palace, hermitage, pyramid, fort, gate, country house, dam, lighthouse, grave"
+1,0,0,INDUSTRIAL_BUILDING,"foundry, fuel depot, industrial building, factory"
+0,1,0,LEISURE_CENTER,"bowling, snooker, pool billiard, flying club, dance studio school, sauna, solarium massage, leisure center, spa"
+0,1,0,LIBRARY,library
+1,0,0,MANUFACTURING_FACILITY,manufacturing facility
+0,1,0,MARINA,"yacht basin, marina"
+0,1,0,MARKET,"supermarkets hypermarkets, farmers, public, informal, market"
+0,1,0,MEDIA_FACILITY,media facility
+0,0,0,MILITARY_INSTALLATION,"military base, coast guard station, military installation, naval base"
+1,0,0,MOTORING_ORGANIZATION_OFFICE,motoring organization office
+0,0,0,MOUNTAIN_PASS,mountain pass
+0,1,0,MUSEUM,museum
+0,1,0,NATIVE_RESERVATION,"native reservation, reservation"
+0,1,0,NIGHTLIFE,"bar, karaoke club, jazz club, private club, wine bar, comedy club, cocktail bar, discotheque, nightlife"
+0,0,1,NON_GOVERNMENTAL_ORGANIZATION,non-governmental organization
+1,0,0,OPEN_PARKING_AREA,"open parking area, parking lot"
+0,0,1,OTHER,"locality, free trade zone, traffic circle, unknown"
+1,0,0,PARKING_GARAGE,parking garage
+0,1,0,PARK_RECREATION_AREA,"historic site, lakeshore, seashore, river scenic area, fishing hunting area, battlefield, winter sport, boat launching ramp, preserve, forest area, recreation area, ski resort, cemetery, historical park, parkway, memorial, fairground, picnic area, wilderness area, park recreation area, forest(s), fossilized forest, garden(s), wildlife reserve, nature reserve, forest station, hunting reserve, forest reserve, park"
+1,0,0,PETROL_STATION,petrol station
+0,0,1,PHARMACY,"pharmacy, dispensary"
+0,0,1,PLACE_OF_WORSHIP,"ashram, synagogue, mosque, gurudwara, church, temple, place of worship, mission, retreat, temple(s), religious site, religious center, monastery, convent"
+0,0,1,POLICE_STATION,"order 1 area, police station, police post"
+1,0,0,PORT_WAREHOUSE_FACILITY,"harbor(s), docking basin, port, port/warehouse facility, dockyard, dock(s)"
+1,0,0,POST_OFFICE,"local, post office"
+1,0,0,PRIMARY_RESOURCE_UTILITY,"primary resource/utility, power station, gas-oil separator plant"
+0,0,0,PRISON_CORRECTIONAL_FACILITY,"prison, prison/correctional facility"
+0,0,1,PUBLIC_AMENITY,"pedestrian subway, toilet, road rescue, passenger transport ticket office, public call box, public amenity, communication center"
+1,1,1,PUBLIC_TRANSPORT_STOP,"coach stop, bus stop, taxi stand, tram stop, public transport stop, metro station, railroad station, bus station, railroad stop"
+1,1,1,RAILWAY_STATION,"national, railway siding, metro, (sub) urban, railway station"
+1,0,0,RENT_A_CAR_FACILITY,rent-a-car facility
+1,0,0,RENT_A_CAR_PARKING,rent-a-car-parking
+1,0,0,REPAIR_FACILITY,"bodyshops, tyre (tire) services, repair shops, car glass replacement shops, general car repair servicing, sale installation of car accessories, motorcycle repair, truck repair service, repair facility"
+0,0,1,RESEARCH_FACILITY,research facility
+0,0,1,RESIDENTIAL_ACCOMMODATION,"retirement community, townhouse complex, flats/apartment complex, condominium complex, residential estate, residential accommodation"
+0,1,0,RESTAURANT,"German, creole-Cajun, Dutch, banquet rooms, bistro, Israeli, Slovak, Jamaican, vegetarian, seafood, Vietnamese, Maltese, Sichuan, welsh, Chinese, Japanese, Algerian, Californian, fusion, Shandong, salad bar, Savoy an, Spanish, Ethiopian, Taiwanese, doughnuts, Iranian, Canadian, American, Norwegian, French, Hunan, Polynesian, afghan, roadside, Asian, swiss, erotic, crêperie, Surinamese, Egyptian, Hungarian, Nepalese, barbecue, hot pot, hamburgers, Mediterranean, Latin American, tapas, British, Mexican, Guangdong, Asian (other), buffet, sushi, Mongolian, international, mussels, Thai, Venezuelan, Rumanian, chicken, soup, kosher, steak house, yogurt/juice bar, Italian, Korean, Cypriot, Bosnian, Bolivian, Dominican, Belgian, Tunisian, Scottish, English, Pakistani, Czech, Hawaiian, Maghrib, Tibetan, Arabian, middle eastern, Chilean, Shanghai, polish, Filipino, Sudanese, Armenian, Burmese, Brazilian, Scandinavian, Bulgarian, soul food, Colombian, Jewish, pizza, Sicilian, organic, Greek, Basque, Uruguayan, cafeterias, Finnish, African, Corsican, Syrian, Caribbean, Dongbei, Russian, grill, take away, fast food, Australian, Irish, pub food, fondue, Lebanese, Indonesian, Danish, Provençal, teppanyaki, Indian, Mauritian, western continental, Peruvian, Cambodian, snacks, Swedish, macrobiotic, ice cream parlor, Slavic, Turkish, Argentinean, Austrian, exotic, Portuguese, Luxembourgian, Moroccan, sandwich, Cuban, restaurant"
+0,1,0,RESTAURANT_AREA,restaurant area
+0,1,0,REST_AREA,"rest area, halting place"
+0,1,0,SCENIC_PANORAMIC_VIEW,"scenic/panoramic view, observation point"
+0,0,1,SCHOOL,"culinary school, primary school, art school, senior high school, driving school, language school, sport school, preschool, high school, middle school, vocational training, special school, child care facility, school, technical school, military school, agricultural school"
+0,0,1,SHOP,"factory outlet, security products, Christmas/holiday store, opticians, house garden: lighting, lottery shop, musical instruments, nail salon, house garden: painting decorating, hobby/free time, newsagents tobacconists, clothing accessories: specialty, dry cleaners, bags leatherwear, pet supplies, clothing accessories: children, construction material equipment, jewelry, clocks watches, clothing accessories: footwear shoe repairs, house garden: curtains/textiles, electrical, office it: consumer electronics, electrical, office it: camera's photography, cd's, DVD videos, laundry, clothing accessories: men, florists, pawn shop, book shops, marine electronic equipment, food drinks: food markets, house garden: carpet/floor coverings, photocopy, boating equipment accessories, mobile phone shop, toys games, specialty foods, clothing accessories: general, food drinks: bakers, tailor shop, gifts, cards, novelties souvenirs, animal services, sports equipment clothing, stamp shop, electrical appliance, electrical, office it: office equipment, photo lab/development, wholesale clubs, house garden: furniture fittings, local specialties, food drinks: butchers, variety store, food drinks: food shops, food drinks: wine spirits, drug store, furniture/home furnishings, electrical, office it: computer supplies, cd/video rental, medical supplies equipment, agricultural supplies, beauty salon, house garden: garden centers services, food drinks: fishmongers, beauty supplies, clothing accessories: women, travel agents, retail outlet, recycling shop, house garden: glass windows, hardware, real estate agents, glassware/ceramic, delicatessen, house garden: kitchens bathrooms, betting station, hairdressers barbers, food drinks: grocers, food drinks: green grocers, convenience stores, drive through bottle shop, house garden: do-it-yourself centers, antique/art, shop, store"
+0,0,1,SHOPPING_CENTER,"mall, shopping center"
+0,0,1,SPORTS_CENTER,"thematic sport, squash court, fitness club center, sports center"
+0,1,0,STADIUM,"netball, football, baseball, race track, multi-purpose, motor sport, cricket ground, rugby ground, ice hockey, athletic, horse racing, basketball, soccer, stadium, athletic field, racetrack"
+0,1,0,SWIMMING_POOL,swimming pool
+0,1,0,TENNIS_COURT,tennis court
+0,1,0,THEATER,"amphitheater, concert hall, dinner theater, music center, opera, cabaret, theater, opera house"
+0,1,0,TOURIST_INFORMATION_OFFICE,tourist information office
+1,0,0,TRAFFIC_LIGHT,traffic light
+1,0,0,TRAFFIC_SERVICE_CENTER,"traffic control department, traffic service center"
+1,0,0,TRAFFIC_SIGN,traffic sign
+0,1,0,TRAIL_SYSTEM,"adventure vehicle, rock climbing, horse riding, mountain bike, hiking, trail system"
+1,0,0,TRANSPORT_AUTHORITY VEHICLE_REGISTRATION,transport authority/vehicle registration
+1,0,0,TRUCK_STOP,truck stop
+0,0,1,VETERINARIAN,"veterinary facility, veterinarian"
+0,1,0,WATER_SPORT,water sport
+1,0,0,WEIGH_STATION,"weigh scales, weigh station"
+0,0,1,WELFARE_ORGANIZATION,welfare organization
+0,1,0,WINERY,winery
+0,1,0,ZOOS_ARBORETA_BOTANICAL_GARDEN,"wildlife park, aquatic zoo marine park, arboreta botanical gardens, zoo, zoos, arboreta botanical garden"
