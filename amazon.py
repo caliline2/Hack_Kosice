@@ -1,8 +1,19 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from sqlalchemy import desc
 from models import *
+import json
+import requests
+import pandas as pd
+
 
 app = Flask(__name__)
+
+
+
+# Azure Maps API
+subscriptionKey = "mdvhwX6Era11JlFA5Mtx9Lar7xnzUxQc_6fuvtQ8p_w"
+
+url2 = "https://raw.githubusercontent.com/caliline2/Hack_Kosice/main/DataTypesAzureMap.csv"
 
 
 @app.route("/test/")
@@ -34,6 +45,15 @@ def category_fun(category):
     return final_geojson_string
 
 
+@app.route("/get-ventures/")
+def get_ventures_fun():
+
+    return '''{ "type": "FeatureCollection", "features":[{ "type": "Feature", "properties":{"name":"Piváreň Troja"}, "geometry": { "type": "Point", "coordinates": [ 21.24192, 48.71498 ] } },{ "type": "Feature", "properties":{"name":"Šport Pub"}, "geometry": { "type": "Point", "coordinates": [ 21.2411, 48.71519 ] } },{ "type": "Feature", "properties":{"name":"Vigvam pub"}, "geometry": { "type": "Point", "coordinates": [ 21.23872, 48.71385 ] } },{ "type": "Feature", "properties":{"name":"Starobrno Pub"}, "geometry": { "type": "Point", "coordinates": [ 21.24304, 48.7128 ] } },{ "type": "Feature", "properties":{"name":"JULYDENT"}, "geometry": { "type": "Point", "coordinates": [ 21.23916, 48.7128 ] } },{ "type": "Feature", "properties":{"name":"KALLADENT"}, "geometry": { "type": "Point", "coordinates": [ 21.23916, 48.7128 ] } },{ "type": "Feature", "properties":{"name":"Zubná ambulancia"}, "geometry": { "type": "Point", "coordinates": [ 21.23885, 48.71324 ] } },{ "type": "Feature", "properties":{"name":"Turistická ubytovňa"}, "geometry": { "type": "Point", "coordinates": [ 21.23902, 48.71299 ] } },{ "type": "Feature", "properties":{"name":"Ubytovňa"}, "geometry": { "type": "Point", "coordinates": [ 21.24047, 48.7165 ] } },{ "type": "Feature", "properties":{"name":"Drink Market, S. R. O."}, "geometry": { "type": "Point", "coordinates": [ 21.23885, 48.71324 ] } },{ "type": "Feature", "properties":{"name":"Fragaria"}, "geometry": { "type": "Point", "coordinates": [ 21.23903, 48.71246 ] } },{ "type": "Feature", "properties":{"name":"K-Tel S. R. O."}, "geometry": { "type": "Point", "coordinates": [ 21.24373, 48.71162 ] } },{ "type": "Feature", "properties":{"name":"Dkf SRO"}, "geometry": { "type": "Point", "coordinates": [ 21.23916, 48.7128 ] } }] }'''
+
+
+@app.route("/get-ventures-data/")
+def get_ventures_data_fun():
+    return {"IndustrialRanking": 0.2, "F&B Ranking" :  1.4000000000000001, "Public Amenities Ranking" :  1.0}
 
 
 if __name__ == "__main__":
